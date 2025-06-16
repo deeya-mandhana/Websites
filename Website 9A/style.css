@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(135deg, #f5e6e8, #f3f9f7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.invitation-wrapper {
+  padding: 40px;
+}
+
+.invitation-card {
+  position: relative;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+  max-width: 400px;
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+  animation: fadeIn 1s ease forwards;
+}
+
+.floral-border {
+  background: url('https://www.transparenttextures.com/patterns/flowers.png');
+  opacity: 0.08;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+.content {
+  position: relative;
+  padding: 30px 25px;
+  z-index: 1;
+}
+
+.event-title {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.5rem;
+  color: #c4452f;
+  margin-bottom: 10px;
+  animation: fadeSlideIn 0.8s ease forwards;
+}
+
+.event-subtitle {
+  font-size: 1rem;
+  color: #888;
+  margin-bottom: 15px;
+}
+
+.couple-names {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.event-details p {
+  font-size: 0.95rem;
+  color: #555;
+  margin: 8px 0;
+  line-height: 1.5;
+}
+
+.event-details strong {
+  color: #c4452f;
+}
+
+.rsvp {
+  margin-top: 25px;
+}
+
+.rsvp-text {
+  font-size: 0.9rem;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.rsvp-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btn {
+  background: #c4452f;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s;
+  letter-spacing: 0.5px;
+}
+
+.btn:hover {
+  background: #a53726;
+  transform: scale(1.05);
+}
+
+.btn.decline {
+  background: #555;
+}
+
+.btn.decline:hover {
+  background: #333;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeSlideIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 450px) {
+  .event-title {
+    font-size: 2rem;
+  }
+  .couple-names {
+    font-size: 1.5rem;
+  }
+}

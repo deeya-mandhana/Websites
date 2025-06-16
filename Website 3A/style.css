@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #ffffff;
+  --text: #000000;
+  --accent: #ff6b6b;
+  --box: #f9f9f9;
+  --shadow: rgba(0, 0, 0, 0.1);
+}
+
+#toggle-mode:checked ~ * {
+  --bg: #1f1f1f;
+  --text: #ffffff; /* changed from #eee to pure white */
+  --accent: #ff6b6b;
+  --box: #2e2e2e;
+  --shadow: rgba(255, 255, 255, 0.05);
+}
+
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  padding: 20px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+#toggle-mode:checked ~ * {
+  --bg: #1f1f1f;
+  --text: #ffffff;
+  --accent: #ff6b6b;
+  --box: #2e2e2e;
+  --shadow: rgba(255, 255, 255, 0.05);
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+header h1 {
+  font-size: 2.5rem;
+  color: var(--accent);
+}
+header p {
+  font-size: 1.2rem;
+}
+
+.category-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+.tab {
+  padding: 10px 16px;
+  background: var(--box);
+  color: var(--text);
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.tab:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+.menu {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.menu-category {
+  background: var(--box);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px var(--shadow);
+  transition: transform 0.3s ease;
+}
+.menu-category:hover {
+  transform: translateY(-4px);
+}
+.menu-category h2 {
+  margin-bottom: 16px;
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 6px;
+  color: var(--accent);
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px dashed #ccc;
+}
+.item:last-child {
+  border-bottom: none;
+}
+.item h4 {
+  font-size: 1rem;
+}
+.item p {
+  color: var(--accent);
+  font-weight: bold;
+}
+
+footer {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 0.9rem;
+  color: #888;
+}
+
